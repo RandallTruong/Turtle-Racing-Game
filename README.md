@@ -1,2 +1,2 @@
 # Turtle-Racing-Game
-This is an easy turtle racing game created using python
+This is a simple turtle racing game created using the turtle module in python
