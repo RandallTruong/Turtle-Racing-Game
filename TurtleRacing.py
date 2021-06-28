@@ -9,7 +9,6 @@ WIDTH, HEIGHT = 500, 500
 COLORS = ["magenta", "brown", "skyblue", "black",
           "navy", "orange", "violet", "gold", "pink", "gray"]
 
-
 def get_number_of_turtles():  # Ask user to input the number of turtles they want to race
     number_of_turtles = 0
     # Continue to ask the user to insert a number until they insert a valid number
@@ -29,13 +28,11 @@ def get_number_of_turtles():  # Ask user to input the number of turtles they wan
         else:
             print("Invalid entry number is not in range")
 
-
 turtles = get_number_of_turtles()
 # Randomize the list of colors
 random.shuffle(COLORS)
 # Slice opertor: Select unique colors based on the number of turtles
 colors = COLORS[:turtles]
-
 
 def create_turtles(colors):
     # Create an empty list to hold all the turtles
@@ -59,7 +56,6 @@ def create_turtles(colors):
         turtles.append(racer)
     return turtles
 
-
 def race(colors):
     turtles = create_turtles(colors)
     # Turtle keeps moving until one reaches the end of the screen
@@ -79,7 +75,6 @@ def race(colors):
                 # then use the same index to find the color in the list
                 return colors[turtles.index(racer)]
 
-
 def init_window():
     # Initialize a screen with the turtle module
     window = turtle.Screen()
@@ -88,7 +83,6 @@ def init_window():
     window.bgcolor("green")
     # Define width and height of screen
     window.setup(width=500, height=500)
-
 
 init_window()
 winning_turtle = race(colors)
